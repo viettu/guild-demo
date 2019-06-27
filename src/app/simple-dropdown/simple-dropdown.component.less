@@ -1,0 +1,54 @@
+:host {
+  display: inline-block;
+  position: relative;
+  width: 320px;
+
+  .dropdown-wrapper {
+    width: 100%;
+    display: flex;
+    border: 1px solid lightgray;
+
+    .display-content {
+      vertical-align: middle;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 50px;
+      padding: 0 10px;
+      flex: 1;
+    }
+
+    button.toggle {
+      padding: 0;
+      margin: 0;
+      height: 50px;
+      width: 50px
+    }
+  }
+
+  .display-panel {
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: auto;
+    overflow: auto;
+
+    .items-container {
+      padding-inline-start: 0;
+      padding: 10px 0;
+      border: 1px solid lightgray;
+
+      & > li {
+        list-style-type: none;
+        min-height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid green;
+        }
+      }
+    }
+  }
+}

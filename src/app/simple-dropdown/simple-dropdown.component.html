@@ -1,0 +1,14 @@
+<div class="dropdown-wrapper">
+
+  <label class="display-content">
+      <span>display value</span>
+  </label>
+
+  <button class="toggle" #toggleBtn>...</button>
+</div>
+
+<div class="display-panel">
+  <ul class="items-container">
+    <li *ngFor="let item of items">{{item.label}}</li>
+  </ul>
+</div>
