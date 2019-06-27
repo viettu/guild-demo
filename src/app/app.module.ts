@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SimpleDropdownModule } from './simple-dropdown/simple-dropdown.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SimpleDropdownModule } from './simple-dropdown/simple-dropdown.module';
   ],
   imports: [
     BrowserModule,
-    SimpleDropdownModule
+    SimpleDropdownModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

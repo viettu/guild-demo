@@ -1,14 +1,14 @@
 <div class="dropdown-wrapper">
 
   <label class="display-content">
-      <span>display value</span>
+      <span>{{(displayItem$ | async)?.label}}</span>
   </label>
 
   <button class="toggle" #toggleBtn>...</button>
 </div>
 
-<div class="display-panel">
+<div class="display-panel" *ngIf="visibilityPanel$ | async">
   <ul class="items-container">
-    <li *ngFor="let item of items">{{item.label}}</li>
+    <li *ngFor="let item of items" (click)="onItemClick(item)">{{item.label}}</li>
   </ul>
 </div>
